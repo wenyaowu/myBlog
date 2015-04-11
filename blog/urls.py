@@ -7,4 +7,5 @@ from blog import views
 urlpatterns = patterns('',
                        # url(url pattern, view, name)
                        # http://DomainName/blog/(urlpattern) ---> Go to view
-                       url(r'^$', views.index, name='index'),)
+                       url(r'^$', views.index, name='index'),
+                       url(r'^about_me/', views.about_me, name='about_me'),)
