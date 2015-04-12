@@ -8,4 +8,6 @@ urlpatterns = patterns('',
                        # url(url pattern, view, name)
                        # http://DomainName/blog/(urlpattern) ---> Go to view
                        url(r'^$', views.index, name='index'),
-                       url(r'^about_me/', views.about_me, name='about_me'),)
+                       url(r'^about_me/', views.about_me, name='about_me'),
+                       url(r'^article/(?P<article_name_slug>[\w\-]+)/$', views.article, name='article'),
+                       url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.category, name='category'),)

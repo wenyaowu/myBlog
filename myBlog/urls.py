@@ -13,10 +13,10 @@ urlpatterns = patterns('',
 
 )
 
-if settings.DEBUG:
-    urlpatterns += patterns(
-                'blog.views.static',
-                (r'^media/(?P<path>.*)',
-                'serve',
-                {'document_root': settings.MEDIA_ROOT}),
-                )
+#if settings.DEBUG:
+#    urlpatterns += patterns(
+#                'blog.views.static',
+#                (r'^media/(?P<path>.*)',
+#                'serve',
+#                {'document_root': settings.MEDIA_ROOT}),
+#                )
