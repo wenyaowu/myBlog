@@ -18,7 +18,7 @@ TEMPLATE_DIRS = (TEMPLATE_PATH,) # Put in the absolute path of template
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_PATH = os.path.join(BASE_DIR, 'static')
-STATIC_DIRS = (STATIC_PATH,)
+STATICFILES_DIRS = (STATIC_PATH,)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

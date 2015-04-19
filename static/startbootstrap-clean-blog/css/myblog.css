@@ -1,0 +1,15 @@
+.code_keyword{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 10px 0 0;
+    color:#FF8000;
+}
+.my_subheading{
+  font-size: 24px;
+  line-height: 1.1;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 10px 0 0;
+}
