@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body %}
+<h1 class="intro-header text-center">{{ article.title }}</h1>
+    </br>
+
+    <p>{{ article.text }}</p>
+{% endblock %}
