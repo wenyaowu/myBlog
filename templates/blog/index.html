@@ -19,11 +19,12 @@
                             {{ article.title }}
                         </h2>
                     </a>
-                    <p >{{ article.text | truncatewords_html:80 | markdown }} <a class="text-right" href="{% url 'article' article.slug %}">(Read More)</a></p>
-
+                    <div class="post-content">{{ article.text | truncatewords_html:80 | markdown }}
+                        <a class="text-right post-content" href="{% url 'article' article.slug %}">(Read More)</a>
+                    </div>
                     <p class="post-meta">
                         Posted on {{ article.pub_datetime }}
-                        Tag: {{ article.tags.all| join:", " }}
+                        Tag: {% for tag in article.tags.all %}<a href="{% url 'tag'  tag.slug  %}">{{ tag }} </a>{% endfor %}
                     </p>
                 </div>
                 <hr>

@@ -12,4 +12,5 @@ urlpatterns = patterns('',
                        url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.category, name='category'),
                        url(r'^article/(?P<article_title_slug>[\w\-]+)/$', views.article, name='article'),
                        url(r'^feed/$', feed.LatestPosts(), name='feed'),
+                       url(r'^tag/(?P<tag_name_slug>[\w\-]+)/$', views.tag, name='tag'),
                        )

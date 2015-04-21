@@ -15,10 +15,12 @@
                         <h2 class="post-title">
                             {{ article.title }}
                         </h2>
-                        <p >{{ article.text | markdown }}</p>
+                    <div class="post-content">
+                        {{ article.text | markdown }}
+                    </div>
                     <p class="post-meta">
                         Posted on {{ article.pub_datetime }}
-                        Tag: {{ article.tags.all| join:", " }}
+                        Tag: {% for tag in article.tags.all %}<a href="{% url 'tag'  tag.slug  %}">{{ tag }} </a>{% endfor %}
                     </p>
                     </div>
 

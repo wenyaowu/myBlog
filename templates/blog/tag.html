@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body %}
+
+    <h1 class="text-center text-capitalize">{{ tag.slug }}</h1>
+<div class="tag-list">
+    <ul>
+    {% for article in articles %}
+    <li>
+        <a href="{% url 'article' article.slug %}">{{ article.title }}</a>
+    </li>
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
