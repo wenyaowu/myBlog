@@ -9,7 +9,7 @@ from blog.models import Article, Category
 def index(request):
     context_dict = {'header_image': 'home.jpg', 'header_title':'Coder Shack'}
     articles = Article.objects.all()[:5]
-    context_dict['articles'] =articles
+    context_dict['articles'] = articles
     return render(request, 'blog/index.html', context_dict)
 
 

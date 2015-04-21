@@ -15,7 +15,7 @@
                         <h2 class="post-title">
                             {{ article.title }}
                         </h2>
-                    {{ article.text | markdown }}
+                        <p >{{ article.text | markdown }}</p>
                     <p class="post-meta">
                         Posted on {{ article.pub_datetime }}
                         Tag: {{ article.tags.all| join:", " }}

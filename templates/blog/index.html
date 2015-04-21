@@ -14,12 +14,13 @@
         {% for article in articles %}
 
                 <div class="post-preview">
-                    <a href="{% url 'article' article.title %}">
+                    <a href="{% url 'article'  article.slug  %}">
                         <h2 class="post-title">
                             {{ article.title }}
                         </h2>
                     </a>
-                    {{ article.text | markdown }}
+                    <p >{{ article.text | truncatewords_html:80 | markdown }} <a class="text-right" href="{% url 'article' article.slug %}">(Read More)</a></p>
+
                     <p class="post-meta">
                         Posted on {{ article.pub_datetime }}
                         Tag: {{ article.tags.all| join:", " }}
