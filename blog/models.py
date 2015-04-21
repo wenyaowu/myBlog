@@ -4,6 +4,12 @@ from django.template.defaultfilters import slugify
 from django_markdown.models import MarkdownField
 # Create your models here.
 
+class Tag(models.Model):
+    slug = models.SlugField(max_length=200, unique=True)
+    def __unicode__(self):
+        return self.slug
+
+
 class ArticleQuerySet(models.QuerySet):
     def published(self):
         return self.filter(publish=True)
@@ -24,10 +30,12 @@ class Article(models.Model):
     text = MarkdownField()
     pub_datetime = models.DateTimeField(default=datetime.now, blank=True)
     mod_date_time = models.DateTimeField(auto_now=True)
-    category = models.ForeignKey(Category, null=True)
     views = models.IntegerField(default=0)
     replies = models.IntegerField(default=0)
     publish = models.BooleanField(default=True)
+
+    category = models.ForeignKey(Category, null=True)
+    tags = models.ManyToManyField(Tag)
 
     objects = ArticleQuerySet.as_manager()
 

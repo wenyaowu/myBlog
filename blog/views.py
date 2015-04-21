@@ -25,11 +25,12 @@ def category(request, category_name_slug):
         context_dict['category'] = category
         context_dict['category_name'] = category.name
 
-        articles = Article.objects.filter(category=category)
+        articles = Article.objects.filter(category=category)[:5]
         context_dict['articles'] = articles
 
         context_dict['header_image'] = category.name+'.jpg'
         context_dict['header_title'] = category.name
+
     except Category.DoesNotExist:
         pass
 

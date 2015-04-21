@@ -20,7 +20,10 @@
                         </h2>
                     </a>
                     {{ article.text | markdown }}
-                    <p class="post-meta">Posted on {{ article.pub_datetime }}</p>
+                    <p class="post-meta">
+                        Posted on {{ article.pub_datetime }}
+                        Tag: {{ article.tags.all| join:", " }}
+                    </p>
                 </div>
                 <hr>
 
