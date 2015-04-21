@@ -2,7 +2,7 @@ __author__ = 'evanwu'
 
 from django.conf.urls import patterns, url
 from blog import views
-
+import feed
 # create url pattern, must named urlpatterns
 urlpatterns = patterns('',
                        # url(url pattern, view, name)
@@ -10,5 +10,6 @@ urlpatterns = patterns('',
                        url(r'^$', views.index, name='index'),
                        url(r'^about_me/', views.about_me, name='about_me'),
                        url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.category, name='category'),
-                       url(r'^article/(?P<article_title_slug>[\w\-]+)/$', views.article, name='article')
+                       url(r'^article/(?P<article_title_slug>[\w\-]+)/$', views.article, name='article'),
+                       url(r'^feed/$', feed.LatestPosts(), name='feed'),
                        )

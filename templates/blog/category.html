@@ -14,7 +14,7 @@
         {% for article in articles %}
 
                 <div class="post-preview">
-                    <a href="post.html">
+                    <a href="{% url 'article' article.title %}">
                         <h2 class="post-title">
                             {{ article.title }}
                         </h2>

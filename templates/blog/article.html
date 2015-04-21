@@ -3,7 +3,28 @@
 
 {% load staticfiles %}
 
+{% load django_markdown %}
+
 {% block body %}
-<h1>{{ article.title }}</h1>
+<article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                    <div class="post-preview">
+                        <h2 class="post-title">
+                            {{ article.title }}
+                        </h2>
+                    {{ article.text | markdown }}
+                    <p class="post-meta">
+                        Posted on {{ article.pub_datetime }}
+                        Tag: {{ article.tags.all| join:", " }}
+                    </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </article>
 
 {% endblock %}
