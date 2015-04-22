@@ -2,3 +2,28 @@
 {% extends 'base.html' %}
 
 {% load staticfiles %}
+{% load disqus_tags %}
+
+
+{% block body %}
+<br>
+<div class="container-fluid">
+    <div class="row">
+    <!--Pic-->
+        <div class="col-xs-6 col-md-4">
+            <img id="profile-pic" src="/static/images/profile.jpg" alt="profile">
+        </div>
+    <!--biography-->
+        <div class ="biography" class="col-xs-6 col-md-4">
+            <h2>Hi, I'm
+                <span>Evan Wu</span>
+            </h2>
+            <p>I'm a programmer and surfer who just graduated from UCLA.</p>
+            <p>I am currently looking for job in Web and software development.</p>
+            <p>My blog <a href="{% url "index" %}">Coder Shack</a> is where I share my thought on <a href="{% url "category" "coding" %}">Coding</a> and <a href="{% url "category" "surfing" %}">Surfing</a>.</p>
+            <p>You can also find me on <a href="https://www.linkedin.com/pub/wen-yao-wu/78/45/646">linkedin</a>, sharing some code on <a href="https://github.com/wenyaowu">github</a>, and jibjabbing on <a href="https://www.facebook.com/evan.wu.353">facebook</a></p>
+            <p>If you want to contact me or just say hi, you can reach me at <a href="mailto:evanwu0225@gmail.com">evanwu0225@gmail.com</a> </p>
+        </div>
+</div>
+</div>
+{% endblock %}
