@@ -4,6 +4,8 @@
 {% load staticfiles %}
 
 {% load django_markdown %}
+{% load disqus_tags %}
+
 
 {% block body %}
 <article>
@@ -27,6 +29,15 @@
                 </div>
             </div>
         </div>
-    </article>
+</article>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {% disqus_show_comments "myblog"%}
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}

@@ -28,6 +28,10 @@ SITE_ID = 1
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
+# Disqus
+DISQUS_API_KEY = 'LJQRFeGgHHsPVqYK9GoLBievOfx5qq7X9PjY4Tm2HUIuvq7siEOAWseJbQ0YeXm5'
+DISQUS_WEBSITE_SHORTNAME = 'myblog'
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'o49cxm_k1*)7b&l0!x=+tw^*&$ah6cflv2ygoarj6jt%8(33-f'
 
@@ -51,6 +55,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'blog',
     'django_markdown',
+    'disqus'
 )
 
 

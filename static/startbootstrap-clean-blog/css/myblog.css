@@ -1,10 +1,5 @@
-.code_keyword{
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.1;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 10px 0 0;
-    color:#FF8000;
+b#keyword {
+    color:#FF8000 !important;
 }
 .my_subheading{
   font-size: 24px;
@@ -14,15 +9,33 @@
   margin: 10px 0 0;
 }
 
-div.post-content a{
+div.post-content a, div.post-content p{
     font-size: 16px;
 }
 
-div.post-content p{
-    font-size: 16px;
-}
 
 .post-content p img{
     width: 500px;
 
 }
+
+img#profile-pic{
+    width: 350px;
+    border-radius : 50%;
+    float: left;
+    margin-right : 10px;
+
+}
+
+div.biography{
+    margin-right :20px;
+    margin-left :20px;
+}
+
+
+div.biography span, div.biography a{
+    color:#FF8000
+
+}
+
+

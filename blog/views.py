@@ -14,7 +14,7 @@ def index(request):
 
 
 def about_me(request):
-    context_dict = {'header_image': 'home.jpg', 'header_title':'ABOUT'}
+    context_dict = {'header_image': 'about.jpg', 'header_title':'ABOUT'}
     return render(request, 'blog/about_me.html', context_dict)
 
 
@@ -44,7 +44,7 @@ def article(request, article_title_slug):
         article = Article.objects.get(slug=article_title_slug)
         context_dict['article'] = article
         context_dict['header_image'] = article.category.name+'.jpg'
-        context_dict['header_title'] = article.category.name
+        context_dict['header_title'] = article.category.name.upper()
     except Article.DoesNotExist:
         pass
 
