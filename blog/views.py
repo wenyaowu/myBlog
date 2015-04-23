@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.shortcuts import render
 from blog.models import Article, Category, Tag
 
 # Create your views here.
