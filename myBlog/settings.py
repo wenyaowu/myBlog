@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'myblog',           # Or path to database file if using sqlite3.
         'USER': 'evanwu',                  # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '104.131.153.24',        # Set to empty string for localhost. Not used with sqlite3.
+        'HOST': 'localhost',        # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
