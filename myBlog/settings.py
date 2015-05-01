@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'myBlog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'myblog',           # Or path to database file if using sqlite3.
+        'NAME': 'blog',           # Or path to database file if using sqlite3.
         'USER': 'evanwu',                  # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': 'localhost',        # Set to empty string for localhost. Not used with sqlite3.
