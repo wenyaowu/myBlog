@@ -37,5 +37,8 @@ div.biography span, div.biography a{
     color:#FF8000
 
 }
+.navbar-inner {
+   min-height: 50px;!important;
+}
 
 
