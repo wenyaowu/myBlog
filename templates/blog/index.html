@@ -19,7 +19,7 @@
                             {{ article.title }}
                         </h2>
                     </a>
-                    <div class="post-content">{{ article.text | truncatewords_html:80 | markdown }}
+                    <div class="post-content">{{ article.text | markdown | truncatewords_html:80 }}
                         <a class="text-right post-content" href="{% url 'article' article.slug %}">(Read More)</a>
                     </div>
                     <p class="post-meta">
