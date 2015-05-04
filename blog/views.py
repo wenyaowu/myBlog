@@ -64,6 +64,7 @@ def tag(request, tag_name_slug):
 
     return render(request, 'blog/tag.html', context_dict)
 
+
 def google(request):
 
     return render(request, 'blog/googlefee7078ca97b9445.html')
