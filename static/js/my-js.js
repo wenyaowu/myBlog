@@ -11,9 +11,9 @@ $(function(){
     $(window).on('scroll', function(){
         $('#test').text("current point:"+$window.scrollTop())
         if ( slidePoint < $window.scrollTop()) {
-            $slideimage.animate({'opacity': '1'}, 300);
+            $slideimage.animate({'opacity': '1'}, 250);
 
-        }else{ $slideimage.stop(true).animate({ 'opacity': '0.2' }, 300);}
+        }else{ $slideimage.stop(true).animate({ 'opacity': '0.2' }, 250);}
 
 
     });
