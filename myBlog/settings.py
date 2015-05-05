@@ -36,11 +36,11 @@ DISQUS_WEBSITE_SHORTNAME = 'myblog'
 SECRET_KEY = 'o49cxm_k1*)7b&l0!x=+tw^*&$ah6cflv2ygoarj6jt%8(33-f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 MARKDOWN_EDITOR_SKIN = 'simple'
 # Application definition

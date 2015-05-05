@@ -37,3 +37,7 @@ div.biography span, div.biography a{
     color:#FF8000
 
 }
+
+div#djangoLogo{
+    opacity: 0.0
+}

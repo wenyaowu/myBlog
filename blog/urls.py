@@ -13,5 +13,5 @@ urlpatterns = patterns('',
                        url(r'^article/(?P<article_title_slug>[\w\-]+)/$', views.article, name='article'),
                        url(r'^feed/$', feed.LatestPosts(), name='feed'),
                        url(r'^tag/(?P<tag_name_slug>[\w\-]+)/$', views.tag, name='tag'),
-                       url(r'^googlefee7078ca97b9445/$', views.google, name='google'),
+                       url(r'^googlefee7078ca97b9445.html/$', views.google, name='google'),
                        )

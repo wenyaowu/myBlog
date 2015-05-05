@@ -4,16 +4,16 @@
 $(function(){
 
     var $window = $(window);
-    var $slideimage = $('#django-logo');
-    var slidePoint = $slideimage.offset().bottom;
+    var $slideimage = $('#djangoLogo');
+    var slidePoint = $slideimage.offset().top-400;
+     $('#test2').text("slidePoint:"+slidePoint);
 
-    $window.on('scroll', function(){
+    $(window).on('scroll', function(){
+        $('#test').text("current point:"+$window.scrollTop())
+        if ( slidePoint < $window.scrollTop()) {
+            $slideimage.animate({'opacity': '1'}, 300);
 
-    if ( (slidePoint) < $window.scrollTop()) {
-        $slideimage.animate({'right': '0px'}, 250);
-    } else {
-        $slideimage.stop(true).animate({'right': '-1400px'}, 250);
-    }
+        }else{ $slideimage.stop(true).animate({ 'opacity': '0.2' }, 300);}
 
 
     });
