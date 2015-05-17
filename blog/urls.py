@@ -1,5 +1,6 @@
 __author__ = 'evanwu'
 from django.views.generic.simple import direct_to_template
+from django.contrib.sitemaps.views import sitemap
 from django.conf.urls import patterns, url
 from blog import views
 import feed
@@ -16,4 +17,6 @@ urlpatterns = patterns('',
                        url(r'^googlefee7078ca97b9445.html/$', views.google, name='google'),
                        url(r'^technoratimedia_sv_14ee3.txt$', direct_to_template,
      						{'template': 'technoratimedia_sv_14ee3.txt', 'mimetype': 'text/plain'})
+                       url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+    name='django.contrib.sitemaps.views.sitemap')
                        )

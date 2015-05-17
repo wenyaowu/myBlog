@@ -45,6 +45,13 @@ ALLOWED_HOSTS = ['*']
 MARKDOWN_EDITOR_SKIN = 'simple'
 # Application definition
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+    },
+]
+
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +60,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.sitemaps',
     'blog',
     'django_markdown',
     'disqus'
