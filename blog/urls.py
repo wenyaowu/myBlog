@@ -15,5 +15,5 @@ urlpatterns = patterns('',
                        url(r'^tag/(?P<tag_name_slug>[\w\-]+)/$', views.tag, name='tag'),
                        url(r'^googlefee7078ca97b9445.html/$', views.google, name='google'),
                        (r'^technoratimedia_sv_14ee3 3.41.44 PM\.txt$', direct_to_template,
-     						{'template': 'robots.txt', 'mimetype': 'text/plain'})
+     						{'template': 'technoratimedia_sv_14ee3 3.41.44 PM.txt', 'mimetype': 'text/plain'})
                        )
