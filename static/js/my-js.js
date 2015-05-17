@@ -5,7 +5,7 @@ $(function(){
 
     var $window = $(window);
     var $slideimage = $('#djangoLogo');
-    var slidePoint = $slideimage.offset().top-150;
+    var slidePoint = $slideimage.offset().top-250;
      $('#test2').text("slidePoint:"+slidePoint);
 
     $(window).on('scroll', function(){
