@@ -1,5 +1,5 @@
 __author__ = 'evanwu'
-
+from django.views.generic.simple import direct_to_template
 from django.conf.urls import patterns, url
 from blog import views
 import feed
@@ -14,4 +14,6 @@ urlpatterns = patterns('',
                        url(r'^feed/$', feed.LatestPosts(), name='feed'),
                        url(r'^tag/(?P<tag_name_slug>[\w\-]+)/$', views.tag, name='tag'),
                        url(r'^googlefee7078ca97b9445.html/$', views.google, name='google'),
+                       (r'^technoratimedia_sv_14ee3 3.41.44 PM\.txt$', direct_to_template,
+     						{'template': 'robots.txt', 'mimetype': 'text/plain'})
                        )
